@@ -3,7 +3,8 @@ package calculatorproject;
 
 import java.awt.*;
 import javax.swing.*;
-public class CalculatorProject {
+import java.awt.event.*;
+public class CalculatorProject implements ActionListener {
     
     JFrame frame = new JFrame("Calculator");
     JLabel label = new JLabel();
@@ -33,8 +34,9 @@ public class CalculatorProject {
     JButton buttonSqrt = new JButton("\u221A");
     
     CalculatorProject(){
-        prepareGui();
         addComponents();
+        prepareGui();
+        
     
     }
     
@@ -83,19 +85,123 @@ public class CalculatorProject {
         
         buttonSeven.setBounds(10, 230, 60, 40);
         buttonSeven.setFont(new Font("Arial",Font.BOLD,20));
+        buttonSeven.setFocusable(false);
         frame.add(buttonSeven);
         
         buttonEight.setBounds(80, 230, 60, 40);
         buttonEight.setFont(new Font("Arial",Font.BOLD,20));
+        buttonEight.setFocusable(false);
         frame.add(buttonEight);
         
         buttonNine.setBounds(150, 230, 60, 40);
         buttonNine.setFont(new Font("Arial",Font.BOLD,20));
+        buttonNine.setFocusable(false);
         frame.add(buttonNine);
         
         buttonFour.setBounds(10, 290, 60, 40);
         buttonFour.setFont(new Font("Arial",Font.BOLD,20));
+        buttonFour.setFocusable(false);
         frame.add(buttonFour);
+        
+        buttonFive.setBounds(80, 290, 60, 40);
+        buttonFive.setFont(new Font("Arial",Font.BOLD,20));
+        buttonFive.setFocusable(false);
+        frame.add(buttonFive);
+        
+        buttonSix.setBounds(150, 290, 60, 40);
+        buttonSix.setFont(new Font("Arial",Font.BOLD,20));
+        buttonSix.setFocusable(false);
+        frame.add(buttonSix);
+        
+        buttonOne.setBounds(10, 350, 60, 40);
+        buttonOne.setFont(new Font("Arial",Font.BOLD,20));
+        buttonOne.setFocusable(false);
+        frame.add(buttonOne);
+        
+        buttonTwo.setBounds(80, 350, 60, 40);
+        buttonTwo.setFont(new Font("Arial",Font.BOLD,20));
+        buttonTwo.setFocusable(false);
+        frame.add(buttonTwo);
+        
+        buttonThree.setBounds(150, 350, 60, 40);
+        buttonThree.setFont(new Font("Arial",Font.BOLD,20));
+        buttonThree.setFocusable(false);
+        frame.add(buttonThree);
+        
+        buttonDot.setBounds(150, 410, 60, 40);
+        buttonDot.setFont(new Font("Arial",Font.BOLD,20));
+        buttonDot.setFocusable(false);
+        frame.add(buttonDot);
+        
+        buttonZero.setBounds(10, 410, 130, 40);
+        buttonZero.setFont(new Font("Arial",Font.BOLD,20));
+        buttonZero.setFocusable(false);
+        frame.add(buttonZero);
+        
+        buttonEqual.setBounds(220,350, 60, 100);
+        buttonEqual.setFont(new Font("Arial",Font.BOLD,20));
+        buttonEqual.setBackground(new Color(239,188,2));
+        buttonEqual.setFocusable(false);
+        frame.add(buttonEqual);
+        
+        
+        buttonDiv.setBounds(220,110, 60, 40);
+        buttonDiv.setFont(new Font("Arial",Font.BOLD,20));
+        buttonDiv.setBackground(new Color(239,188,2));
+        buttonDiv.setFocusable(false);
+        frame.add(buttonDiv);
+        
+        buttonMul.setBounds(220,230, 60, 40);
+        buttonMul.setFont(new Font("Arial",Font.BOLD,20));
+        buttonMul.setBackground(new Color(239,188,2));
+        buttonMul.setFocusable(false);
+        frame.add(buttonMul);
+        
+        buttonMinus.setBounds(220,170, 60, 40);
+        buttonMinus.setFont(new Font("Arial",Font.BOLD,20));
+        buttonMinus.setBackground(new Color(239,188,2));
+        buttonMinus.setFocusable(false);
+        frame.add(buttonMinus);
+        
+        
+        buttonPlus.setBounds(220,290, 60, 40);
+        buttonPlus.setFont(new Font("Arial",Font.BOLD,20));
+        buttonPlus.setBackground(new Color(239,188,2));
+        buttonPlus.setFocusable(false);
+        frame.add(buttonPlus);
+        
+        
+        buttonSqrt.setBounds(10, 170, 60, 40);
+        buttonSqrt.setFont(new Font("Arial",Font.BOLD,20));
+        buttonSqrt.setFocusable(false);
+        frame.add(buttonSqrt);
+        
+        buttonSquare.setBounds(80, 170, 60, 40);
+        buttonSquare.setFont(new Font("Arial",Font.BOLD,20));
+        buttonSquare.setFocusable(false);
+        frame.add(buttonSquare);
+        
+        
+        buttonReciprocal.setBounds(150, 170, 60, 40);
+        buttonReciprocal.setFont(new Font("Arial",Font.BOLD,20));
+        buttonReciprocal.setFocusable(false);
+        frame.add(buttonReciprocal);
+        
+        buttonDelete.setBounds(150, 110, 60, 40);
+        buttonDelete.setFont(new Font("Arial",Font.BOLD,20));
+        buttonDelete.setBackground(Color.red);
+        buttonDelete.setForeground(Color.white);
+        buttonDelete.setFocusable(false);
+        frame.add(buttonDelete);
+        
+        buttonClear.setBounds(80, 110, 60, 40);
+        buttonClear.setFont(new Font("Arial",Font.BOLD,20));
+        buttonClear.setBackground(Color.red);
+        buttonClear.setForeground(Color.white);
+        buttonClear.setFocusable(false);
+        frame.add(buttonClear);
+        
+        
         
         
         
@@ -109,6 +215,11 @@ public class CalculatorProject {
         
         CalculatorProject calculator = new CalculatorProject();
         
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
