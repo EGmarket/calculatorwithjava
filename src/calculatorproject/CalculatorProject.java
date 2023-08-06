@@ -195,15 +195,15 @@ public class CalculatorProject implements ActionListener {
         
         buttonDelete.setBounds(150, 110, 60, 40);
         buttonDelete.setFont(new Font("Arial",Font.BOLD,20));
-        buttonDelete.setBackground(Color.red);
-        buttonDelete.setForeground(Color.white);
+        buttonDelete.setBackground(Color.white);
+        buttonDelete.setForeground(Color.red);
         buttonDelete.setFocusable(false);
         frame.add(buttonDelete);
         
         buttonClear.setBounds(80, 110, 60, 40);
         buttonClear.setFont(new Font("Arial",Font.BOLD,20));
-        buttonClear.setBackground(Color.red);
-        buttonClear.setForeground(Color.white);
+        buttonClear.setBackground(Color.white);
+        buttonClear.setForeground(Color.red);
         buttonClear.setFocusable(false);
         frame.add(buttonClear);
         
@@ -259,6 +259,42 @@ public class CalculatorProject implements ActionListener {
         } else if(source == offRadioButton){
         
             disable();
+        } else if (source == buttonClear){
+            label.setText("");
+            textField.setText("");
+        } else if (source == buttonDelete){
+            int lenght = textField.getText().length();
+            int number = lenght - 1;
+            if(lenght>0){
+                StringBuilder back = new StringBuilder(textField.getText());
+                back.deleteCharAt(number);
+                textField.setText(back.toString());
+            } if (textField.getText().endsWith(""));
+            label.setText("");
+        } else if (source == buttonZero){
+            if(textField.getText().equals("")){
+                return;
+            } else{
+                textField.setText(textField.getText() + "0");
+            }
+        } else if(source==buttonOne){
+            textField.setText(textField.getText() + "1");
+        } else if(source==buttonTwo){
+            textField.setText(textField.getText() + "2");
+        } else if(source==buttonThree){
+            textField.setText(textField.getText() + "3");
+        } else if(source==buttonFour){
+            textField.setText(textField.getText() + "4");
+        } else if(source==buttonFive){
+            textField.setText(textField.getText() + "5");
+        } else if(source==buttonSix){
+            textField.setText(textField.getText() + "6");
+        } else if(source==buttonSeven){
+            textField.setText(textField.getText() + "7");
+        } else if(source==buttonEight){
+            textField.setText(textField.getText() + "8");
+        } else if(source==buttonNine){
+            textField.setText(textField.getText() + "9");
         }
        
     }
