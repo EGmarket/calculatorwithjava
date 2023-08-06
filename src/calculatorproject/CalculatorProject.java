@@ -34,6 +34,7 @@ public class CalculatorProject {
     
     CalculatorProject(){
         prepareGui();
+        addComponents();
     
     }
     
@@ -44,6 +45,62 @@ public class CalculatorProject {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    }
+    
+    public void addComponents(){
+        
+        label.setBounds(250,0,50,50);
+        label.setForeground(Color.white);
+        frame.add(label);
+        
+        textField.setBounds(10, 40, 270, 40);
+        textField.setFont(new Font("Arial",Font.BOLD,20));
+        textField.setEditable(false);
+        textField.setHorizontalAlignment(SwingConstants.RIGHT);
+        frame.add(textField);
+        
+        onRadioButton.setBounds(10, 95, 60, 40);
+        onRadioButton.setSelected(true);
+        onRadioButton.setFont(new Font("Arial",Font.BOLD,14));
+        onRadioButton.setBackground(Color.black);
+        onRadioButton.setForeground(Color.white);
+        onRadioButton.setFocusable(false);
+        frame.add(onRadioButton);
+        
+        
+        offRadioButton.setBounds(10, 120, 60, 40);
+        offRadioButton.setSelected(true);
+        offRadioButton.setFont(new Font("Arial",Font.BOLD,14));
+        offRadioButton.setBackground(Color.black);
+        offRadioButton.setForeground(Color.white);
+        offRadioButton.setFocusable(false);
+        frame.add(offRadioButton);
+        
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(onRadioButton);
+        buttonGroup.add(offRadioButton);
+        
+        buttonSeven.setBounds(10, 230, 60, 40);
+        buttonSeven.setFont(new Font("Arial",Font.BOLD,20));
+        frame.add(buttonSeven);
+        
+        buttonEight.setBounds(80, 230, 60, 40);
+        buttonEight.setFont(new Font("Arial",Font.BOLD,20));
+        frame.add(buttonEight);
+        
+        buttonNine.setBounds(150, 230, 60, 40);
+        buttonNine.setFont(new Font("Arial",Font.BOLD,20));
+        frame.add(buttonNine);
+        
+        buttonFour.setBounds(10, 290, 60, 40);
+        buttonFour.setFont(new Font("Arial",Font.BOLD,20));
+        frame.add(buttonFour);
+        
+        
+        
+    
+    
     
     }
 
