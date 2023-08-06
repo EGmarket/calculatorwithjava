@@ -295,6 +295,52 @@ public class CalculatorProject implements ActionListener {
             textField.setText(textField.getText() + "8");
         } else if(source==buttonNine){
             textField.setText(textField.getText() + "9");
+        } else if(source==buttonPlus){
+            String str = textField.getText();
+            num1 = Double.parseDouble(textField.getText());
+            calculation = 1;
+            textField.setText("");
+            label.setText(str +"+");
+        } else if(source==buttonMinus){
+            String str = textField.getText();
+            num1 = Double.parseDouble(textField.getText());
+            calculation = 2;
+            textField.setText("");
+            label.setText(str +"-");
+        } else if(source==buttonMul){
+            String str = textField.getText();
+            num1 = Double.parseDouble(textField.getText());
+            calculation = 3;
+            textField.setText("");
+            label.setText(str +"X");
+        } else if(source==buttonDiv){
+            String str = textField.getText();
+            num1 = Double.parseDouble(textField.getText());
+            calculation = 4;
+            textField.setText("");
+            label.setText(str +"/");
+        } else if(source == buttonEqual){
+            num2 = Double.parseDouble(textField.getText());
+            switch(calculation){
+                case 1:
+                    results = num1 + num2;
+                    break;
+                case 2:
+                    results = num1 - num2;
+                    break;
+                case 3:
+                    results = num1 * num2;
+                    break;
+                case 4:
+                    results = num1 / num2;
+                    break;
+            } if(Double.toString(results).endsWith(".0")){
+                textField.setText(Double.toString(results).replace(".0", ""));
+            } else {
+                textField.setText(Double.toString(results));
+            }
+            label.setText("");
+            num1 = results;
         }
        
     }
