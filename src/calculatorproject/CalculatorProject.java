@@ -251,7 +251,67 @@ public class CalculatorProject implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+        Object source = e.getSource();
+        
+        if(source == onRadioButton){
+            enable();
+        } else if(source == offRadioButton){
+        
+            disable();
+        }
        
     }
     
+    public void enable(){
+        onRadioButton.setEnabled(false);
+        offRadioButton.setEnabled(true);
+        buttonClear.setEnabled(true);
+        buttonDelete.setEnabled(true);
+        buttonReciprocal.setEnabled(true);
+        buttonSquare.setEnabled(true);
+        buttonSqrt.setEnabled(true);
+        buttonPlus.setEnabled(true);
+        buttonMinus.setEnabled(true);
+        buttonMul.setEnabled(true);
+        buttonDiv.setEnabled(true);
+        buttonEqual.setEnabled(true);
+        buttonZero.setEnabled(true);
+        buttonDot.setEnabled(true);
+        buttonNine.setEnabled(true);
+        buttonEight.setEnabled(true);
+        buttonSeven.setEnabled(true);
+        buttonSix.setEnabled(true);
+        buttonFive.setEnabled(true);
+        buttonFour.setEnabled(true);
+        buttonThree.setEnabled(true);
+        buttonTwo.setEnabled(true);
+        buttonOne.setEnabled(true);
+    }
+    
+    public void disable(){
+        onRadioButton.setEnabled(true);
+        offRadioButton.setEnabled(false);
+        buttonClear.setEnabled(false);
+        buttonDelete.setEnabled(false);
+        buttonReciprocal.setEnabled(false);
+        buttonSquare.setEnabled(false);
+        buttonSqrt.setEnabled(false);
+        buttonPlus.setEnabled(false);
+        buttonMinus.setEnabled(false);
+        buttonMul.setEnabled(false);
+        buttonDiv.setEnabled(false);
+        buttonEqual.setEnabled(false);
+        buttonZero.setEnabled(false);
+        buttonDot.setEnabled(false);
+        buttonNine.setEnabled(false);
+        buttonEight.setEnabled(false);
+        buttonSeven.setEnabled(false);
+        buttonSix.setEnabled(false);
+        buttonFive.setEnabled(false);
+        buttonFour.setEnabled(false);
+        buttonThree.setEnabled(false);
+        buttonTwo.setEnabled(false);
+        buttonOne.setEnabled(false);
+    }
 }
