@@ -6,6 +6,11 @@ import javax.swing.*;
 import java.awt.event.*;
 public class CalculatorProject implements ActionListener {
     
+    
+    double num1=0, num2=0, results =0;
+    int calculation;
+    
+    
     JFrame frame = new JFrame("Calculator");
     JLabel label = new JLabel();
     JTextField textField = new JTextField();
@@ -35,6 +40,7 @@ public class CalculatorProject implements ActionListener {
     
     CalculatorProject(){
         addComponents();
+        addActionEvent();
         prepareGui();
         
     
@@ -203,11 +209,37 @@ public class CalculatorProject implements ActionListener {
         
         
         
+            
+    }
+    
+    public void addActionEvent(){
+        
+        onRadioButton.addActionListener(this);
+        offRadioButton.addActionListener(this);
+        buttonClear.addActionListener(this);
+        buttonDelete.addActionListener(this);
+        buttonReciprocal.addActionListener(this);
+        buttonSquare.addActionListener(this);
+        buttonSqrt.addActionListener(this);
+        buttonPlus.addActionListener(this);
+        buttonMinus.addActionListener(this);
+        buttonMul.addActionListener(this);
+        buttonDiv.addActionListener(this);
+        buttonEqual.addActionListener(this);
+        buttonZero.addActionListener(this);
+        buttonDot.addActionListener(this);
+        buttonNine.addActionListener(this);
+        buttonEight.addActionListener(this);
+        buttonSeven.addActionListener(this);
+        buttonSix.addActionListener(this);
+        buttonFive.addActionListener(this);
+        buttonFour.addActionListener(this);
+        buttonThree.addActionListener(this);
+        buttonTwo.addActionListener(this);
+        buttonOne.addActionListener(this);
         
         
-    
-    
-    
+        
     }
 
    
@@ -219,7 +251,7 @@ public class CalculatorProject implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
     }
     
 }
